@@ -1,0 +1,46 @@
+.transition (@arg)
+{
+	transition: @arg;
+	-moz-transition: @arg;
+	-webkit-transition: @arg;
+	-o-transition: @arg;
+}
+
+.rounded-corners (@radius: 5px)
+{
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop);
+}
+
+.left-border (@color, @width)
+{
+	border-left: solid @color @width;
+}
+
+.animation (@arg) {
+	-webkit-animation: @arg;
+	-moz-animation:    @arg;
+	-ms-animation:     @arg;
+	-o-animation:      @arg;
+	animation:         @arg;
+}
+
+.box-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @color: black, @alpha: 0.1) {
+  -webkit-box-shadow: @x-axis @y-axis @blur fade(@color, @alpha);//rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: 	  @x-axis @y-axis @blur fade(@color, @alpha);//rgba(0, 0, 0, @alpha);
+  -ms-box-shadow: 	  @x-axis @y-axis @blur fade(@color, @alpha);//rgba(0, 0, 0, @alpha);
+  -o-box-shadow: 	  @x-axis @y-axis @blur fade(@color, @alpha);//rgba(0, 0, 0, @alpha);
+  box-shadow:         @x-axis @y-axis @blur fade(@color, @alpha);//rgba(0, 0, 0, @alpha);
+}

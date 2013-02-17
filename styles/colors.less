@@ -1,0 +1,107 @@
+/* Colors */
+@white: white;
+@black: black;
+@gray: darken(white, 2%);
+@grayText: darken(white, 50%);
+
+@darkGray: darken(white, 50%);
+@orange: darken(red, 10%);
+@blue: darken(spin(blue, -35), 14%);
+@green: lighten(spin(green, -35), 3%);
+
+.colorize (@color)
+{
+	.color-backgr, &.color-backgr
+	{
+		background-color: @color;
+	}
+
+	.color-border, &.color-border
+	{
+		border-color: @color;
+	}
+
+	.color-text, &.color-text
+	{
+		color: @color;
+	}
+
+	strong.color
+	{
+		background-color: @color;
+	}
+
+	nav a
+	{
+		.color-text;
+	}
+
+	nav li .back
+	{
+		.color-backgr;
+	}
+
+	.projects .project-holder
+	{
+		border-color: fade(@color, 20%);
+
+		&:hover
+		{
+			.color-border;
+		}
+	}
+
+	#sidebar-holder #sidebar
+	{
+		.box-shadow(0, 0, 50px, darken(@black, 5%), 15%);
+	}
+
+	*
+	{
+		.transition (~"color 0.5s, background-color 0.5s, border-color 0.5s");
+	}
+
+	::selection
+	{
+		color: white;
+		background: @color;
+	}
+	::-moz-selection
+	{
+		color: white;
+		background: @color;
+	}
+}
+
+.orange
+{
+	.colorize(@orange);
+}
+
+.blue
+{
+	.colorize(@blue);
+}
+
+.green
+{
+	.colorize(@green);
+}
+
+#color-select-container
+{
+	.orange
+	{
+		background-color: @orange;
+	}
+
+	.green
+	{
+		background-color: @green;
+	}
+
+	.blue
+	{
+		background-color: @blue;
+	}
+}

@@ -1,0 +1,50 @@
+.loader
+{
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	width: 250px;
+
+	overflow: visible;
+}
+.loader span
+{
+	background: black;
+	border-radius: 5px;
+	display: inline-block;
+	position: relative;
+	width: 8px;
+	height: 8px;
+	position: absolute;
+}
+
+.loader .dot
+{
+	margin-left: -100%;
+	margin-right: 10px;
+	.animation(loading 1s ease-in-out 1s infinite);
+}
+
+.less-frames () {
+	from
+	{
+		margin-left: -50%;
+		opacity: 0;
+	}
+	50%
+	{
+		margin-left: 0;
+		opacity: 1;
+	}
+	to
+	{
+		margin-left: 50%;
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes loading { .less-frames; }
+@-moz-keyframes loading { .less-frames; }
+@-o-keyframes loading { .less-frames; }
+@-ms-keyframes loading { .less-frames; }
+@keyframes loading { .less-frames; }
