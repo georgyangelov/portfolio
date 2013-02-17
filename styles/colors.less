@@ -43,11 +43,17 @@
 
 	.projects .project-holder
 	{
-		border-color: fade(@color, 20%);
+		.front, .back
+		{
+			border-color: fade(@color, 20%);
+		}
 
 		&:hover
 		{
-			.color-border;
+			.front, .back
+			{
+				.color-border;
+			}
 		}
 	}
 

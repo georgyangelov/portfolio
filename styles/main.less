@@ -308,12 +308,16 @@ html, body
 		margin-bottom: 20px;
 		width: 17%;
 
-		padding: 2px;
+		.front, .back
+		{
+			display: block;
+			padding: 2px;
 
-		border: solid 1px @gray;
+			border: solid 1px @gray;
 
-		.rounded-corners(2px);
-		.transition(border-color 0.2s ease-out);
+			.rounded-corners(2px);
+			.transition(border-color 0.2s ease-out);
+		}
 
 		img
 		{
@@ -334,7 +338,71 @@ html, body
 				//.rounded-corners(0);
 			}
 		}
+
+		-webkit-perspective: 600px;
+		-moz-perspective: 600px;
+
+		.front
+		{
+			float: none;
+			position: relative;
+			top: 0;
+			left: 0;
+			z-index: 900;
+
+			-webkit-transform: rotateX(0deg) rotateY(0deg);
+			-webkit-transform-style: preserve-3d;
+			-webkit-backface-visibility: hidden;
+
+			-moz-transform: rotateX(0deg) rotateY(0deg);
+			-moz-transform-style: preserve-3d;
+			-moz-backface-visibility: hidden;
+
+			.transition(all .5s ease-out);
+		}
+
+		&:hover .front
+		{
+			z-index: 900;
+
+			-webkit-transform: rotateX(-180deg);
+			-moz-transform: rotateX(-180deg);
+		}
+
+		.back
+		{
+			float: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 800;
+			width: 98%;
+			height: 95%;
+
+			-webkit-transform: rotateX(180deg);
+			-webkit-transform-style: preserve-3d;
+			-webkit-backface-visibility: hidden;
+
+			-moz-transform: rotateX(180deg);
+			-moz-transform-style: preserve-3d;
+			-moz-backface-visibility: hidden;
+
+			.transition(all .5s ease-out);
+		}
+
+		&:hover .back
+		{
+			z-index: 1000;
+
+			-webkit-transform: rotateX(0deg) rotateY(0deg);
+			-moz-transform: rotateX(0deg) rotateY(0deg);
+		}
 	}
+}
+
+h2
+{
+	clear: both;
 }
 
 #color-select-container
