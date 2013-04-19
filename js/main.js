@@ -1,30 +1,3 @@
-/* Load SmartAjax */
-SmartAjax_load('js/smartajax/', function() {
-	SmartAjax.setOptions({
-		cache: false,
-		containers: [
-			{selector: '#content'}
-		],
-
-		before: function() {
-			$('#loader').show();
-
-			SmartAjax.proceed();
-		},
-		success: function() {
-			$('#content').fadeOut(500, SmartAjax.proceed);
-		},
-		done: function() {
-			$('#content').fadeIn(500, function() {
-				$('#loader').hide();
-			});
-		}
-	});
-
-	SmartAjax.bind('a:not(.no-ajax)');
-	SmartAjax.bindForms('form');
-}, true);
-
 $('nav#menu a').click(function() {
 	$(this).parents('nav').find('li').removeClass('active');
 	$(this).parents('li').addClass('active');
@@ -43,12 +16,3 @@ $('#color-select-container .color-select').click(function() {
 		}
 	}
 });
-
-/*var MainVM = function() {
-	var self = this;
-
-
-};
-
-Application = new MainVM();
-ko.applyBindings(Application);*/
