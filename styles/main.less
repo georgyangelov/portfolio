@@ -2,6 +2,7 @@
 @import url('mixins.less');
 @import url('colors.less');
 @import url('loading.less');
+@import url('content.less');
 
 .no-select
 {
@@ -95,7 +96,7 @@ html, body
 		}
 	}
 
-	h2
+	h2, h3
 	{
 		margin: 0;
 		padding: 20px;
@@ -247,12 +248,21 @@ html, body
 
 	h2
 	{
+		font-size: 30px;
+	}
+
+	h3
+	{
+		font-size: 20px;
+	}
+
+	h2, h3
+	{
 		margin: 0;
 		padding-top: 20px;
 		padding-left: 40px;
 
 		font-weight: normal;
-		font-size: 20px;
 	}
 
 	.desc
@@ -262,6 +272,15 @@ html, body
 
 		font-weight: normal;
 		font-size: 15px;
+	}
+
+	p
+	{
+		margin-top: 15px;
+		padding-left: 50px;
+
+		font-weight: normal;
+		font-size: 18px;
 	}
 
 	strong.color
@@ -294,6 +313,12 @@ html, body
 .text-center
 {
 	text-align: center;
+}
+
+#content p.text-center
+{
+	width: 100%;
+	padding: 0;
 }
 
 .projects
@@ -400,7 +425,7 @@ html, body
 	}
 }
 
-h2
+h2, h3
 {
 	clear: both;
 }

@@ -21,7 +21,7 @@ SmartAjax_load('js/smartajax/', function() {
 		}
 	});
 
-	SmartAjax.bind('a');
+	SmartAjax.bind('a:not(.no-ajax)');
 	SmartAjax.bindForms('form');
 }, true);
 
