@@ -1,4 +1,5 @@
-@import url('http://fonts.googleapis.com/css?family=Raleway:500,700italic,700,400');
+// @import url('http://fonts.googleapis.com/css?family=Raleway:500,700italic,700,400');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
 @import url('mixins.less');
 @import url('colors.less');
 @import url('loading.less');
@@ -26,7 +27,8 @@ html, body
 	margin: 0;
 	padding: 0;
 	background: @white;
-	font-family: Raleway;
+	// font-family: Raleway;
+	font-family: 'Open Sans';
 
 	height: 100%;
 }
@@ -99,7 +101,7 @@ html, body
 	h2, h3
 	{
 		margin: 0;
-		padding: 20px;
+		padding: 18px;
 		text-align: center;
 		font-weight: normal;
 	}
@@ -243,17 +245,17 @@ html, body
 		text-align: center;
 
 		font-weight: normal;
-		font-size: 45px;
+		font-size: 40px;
 	}
 
 	h2
 	{
-		font-size: 30px;
+		font-size: 28px;
 	}
 
 	h3
 	{
-		font-size: 20px;
+		font-size: 18px;
 	}
 
 	h2, h3
@@ -263,6 +265,11 @@ html, body
 		padding-left: 40px;
 
 		font-weight: normal;
+	}
+
+	h3.sub
+	{
+		padding-left: 60px;
 	}
 
 	.desc
@@ -277,10 +284,10 @@ html, body
 	p
 	{
 		margin-top: 15px;
-		padding-left: 50px;
+		padding-left: 70px;
 
 		font-weight: normal;
-		font-size: 18px;
+		font-size: 16px;
 	}
 
 	strong.color
@@ -331,7 +338,9 @@ html, body
 		margin-left: 10px;
 		margin-right: 10px;
 		margin-bottom: 20px;
-		width: 17%;
+
+		width: 270px;
+		height: 200px;
 
 		.front, .back
 		{
@@ -401,8 +410,8 @@ html, body
 			top: 0;
 			left: 0;
 			z-index: 800;
-			width: 98%;
-			height: 95%;
+			width: 270px;
+			height: 200px;
 
 			-webkit-transform: rotateX(180deg);
 			-webkit-transform-style: preserve-3d;

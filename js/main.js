@@ -1,6 +1,8 @@
 $('nav#menu a').click(function() {
 	$(this).parents('nav').find('li').removeClass('active');
 	$(this).parents('li').addClass('active');
+
+	return false;
 });
 
 var colors = ['green', 'orange', 'blue'];
