@@ -9,8 +9,20 @@
 @blue: darken(spin(blue, -35), 14%);
 @green: lighten(spin(green, -35), 3%);
 
+/* Elements */
+@sidebar_color: #303030;
+@sidebar_border_width: 5px;
+
+@menu_item_border_color: none;
+@menu_header_color: @gray;
+
 .colorize (@color)
 {
+	#sidebar-border
+	{
+		background-color: @color;
+	}
+
 	.color-backgr, &.color-backgr
 	{
 		background-color: @color;
@@ -33,7 +45,7 @@
 
 	nav a
 	{
-		.color-text;
+		color: @gray;
 	}
 
 	a
@@ -55,7 +67,8 @@
 	{
 		.front, .back
 		{
-			border-color: fade(@color, 20%);
+			// border-color: fade(@color, 20%);
+			.color-border;
 		}
 
 		&:hover

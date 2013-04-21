@@ -17,4 +17,6 @@ $('#color-select-container .color-select').click(function() {
 			$body.addClass(colors[i]);
 		}
 	}
+
+	return false;
 });
