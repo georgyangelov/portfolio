@@ -1,0 +1,55 @@
+@media only screen {
+	.print-only {
+		display: none;
+	}
+}
+
+@media only print {
+	#sidebar-holder {
+		display: none;
+	}
+
+	#content {
+		margin-left: 0 !important;
+	}
+
+	.no-print {
+		visibility: hidden;
+	}
+
+	.no-print-real {
+		display: none;
+	}
+
+	.print-only {
+		display: auto;
+	}
+
+	#content .project-holder {
+		.back {
+			display: block;
+			position: relative;
+			border: none;
+
+			-webkit-transform: none;
+			-moz-transform: none;
+			-o-transform: none;
+			-ms-transform: none;
+			transform: none;
+
+			p {
+				font-size: 15px;
+			}
+
+			padding-bottom: 30px;
+		}
+	}
+
+	#content {
+		line-height: 18px;
+	}
+
+	.page-break {
+		page-break-inside: avoid;
+	}
+}
